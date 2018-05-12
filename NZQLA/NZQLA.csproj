@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D89E941-BB4F-49B5-AD40-ADF35925E92F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NZQLA</RootNamespace>
+    <AssemblyName>NZQLA</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNITY_EDITOR</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\NZQLA.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Software\Unity5.6\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Software\Unity5.6\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Compare\CompareBase.cs" />
+    <Compile Include="Classes\Define\Define.cs" />
+    <Compile Include="Classes\Behavior\Move\AirPlaneFly.cs" />
+    <Compile Include="Classes\Behavior\Move\Flyer.cs" />
+    <Compile Include="Classes\Behavior\Move\RotaObj.cs" />
+    <Compile Include="Classes\Tool\Collection\CollectionHelper.cs" />
+    <Compile Include="Classes\Tool\Collection\DataWithTimeStorage.cs" />
+    <Compile Include="Classes\Tool\EnumOperate\EnumOperate.cs" />
+    <Compile Include="Classes\Tool\GameObject\GameObjectHelper.cs" />
+    <Compile Include="Classes\Tool\GameObject\Transform\FollowTarget.cs" />
+    <Compile Include="Classes\Tool\Aniamtion\AniPlayCtrl.cs" />
+    <Compile Include="Classes\Tool\ExtendFunction\ExtendFunctionCSharp.cs" />
+    <Compile Include="Classes\Tool\ExtendFunction\ExtendFunctionUnity.cs" />
+    <Compile Include="Classes\Tool\ExtendFunction\OverrideSystem.cs" />
+    <Compile Include="Classes\Tool\File\FileTool.cs" />
+    <Compile Include="Classes\Tool\Frame\FrameStatistic.cs" />
+    <Compile Include="Classes\Tool\Input\InputHelper.cs" />
+    <Compile Include="Classes\Tool\Inspector\EditScriptableAttribute.cs" />
+    <Compile Include="Classes\Tool\Inspector\ReorderableAttribute.cs" />
+    <Compile Include="Classes\Tool\Log\Log.cs" />
+    <Compile Include="Classes\Tool\Math\IDMaker.cs" />
+    <Compile Include="Classes\Tool\Math\NumberConvertHelper.cs" />
+    <Compile Include="Classes\Tool\Mono\MonoActorDontDestoryOnLoad.cs" />
+    <Compile Include="Classes\Tool\MyTool.cs" />
+    <Compile Include="Classes\Tool\Physics\MouseHit\MouseHit.cs" />
+    <Compile Include="Classes\Tool\Physics\MouseHit\MouseHitRoadParticle.cs" />
+    <Compile Include="Classes\Tool\Physics\MouseHit\ShowMouseHitPos.cs" />
+    <Compile Include="Classes\Tool\Random\MyRandom.cs" />
+    <Compile Include="Classes\Tool\Serials\SerialBinaryHelper.cs" />
+    <Compile Include="Classes\Tool\Serials\SerializeHelper.cs" />
+    <Compile Include="Classes\Tool\Serials\SerialJsonHelper.cs" />
+    <Compile Include="Classes\Tool\Serials\SerialXMLHelper.cs" />
+    <Compile Include="Classes\Tool\Sington\MonoSingtonAuto.cs" />
+    <Compile Include="Classes\Tool\Sington\MonoSingtonAutoDontDestoryOnLoad.cs" />
+    <Compile Include="Classes\Tool\Sington\MonoSingtonUnAuto.cs" />
+    <Compile Include="Classes\Tool\Sington\SingtonAuto.cs" />
+    <Compile Include="Classes\Tool\System\Flags\ToDoAttribute.cs" />
+    <Compile Include="Classes\Tool\System\MyApplication.cs" />
+    <Compile Include="Classes\Tool\Mono\MonoActor.cs" />
+    <Compile Include="Classes\Tool\Resources\Example\AssetBundleLoadTest.cs" />
+    <Compile Include="Classes\Tool\Resources\Example\UI\LoadRecsUI.cs" />
+    <Compile Include="Classes\Tool\Resources\Example\UI\MsgUICtrl.cs" />
+    <Compile Include="Classes\Tool\Resources\RecsAssetBundleMgr.cs" />
+    <Compile Include="Classes\Tool\Resources\AssetBundle\AssetBundleHelper.cs" />
+    <Compile Include="Classes\Tool\Resources\AssetBundle\AssetBundleTool.cs" />
+    <Compile Include="Classes\Tool\Resources\AssetBundle\RecsPathCtrl.cs" />
+    <Compile Include="Classes\Tool\Resources\Recs\Recs.cs" />
+    <Compile Include="Classes\Tool\Resources\Recs\RecsLoader.cs" />
+    <Compile Include="Classes\Tool\Resources\Resources\RecsourcesHelper.cs" />
+    <Compile Include="Classes\Tool\Resources\Test\SinGameObject.cs" />
+    <Compile Include="Classes\Tool\Resources\Test\TestLoadRecs.cs" />
+    <Compile Include="Classes\Tool\Resources\Test\TestUrl.cs" />
+    <Compile Include="Classes\Tool\Resources\Tool\MyIEnumtor\IEnumtorHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Tool\UI\UIHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\Tool\Animator\" />
+    <Folder Include="Plugins\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
